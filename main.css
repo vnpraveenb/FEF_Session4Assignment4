@@ -1,0 +1,38 @@
+
+/*Sets the Heading text color */
+h2{
+    color: darkblue;
+}
+
+/*Setting the image to fit the div(imgcontainer class) */
+.imgcontainer img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Fits the image perfectly into the div container */
+    overflow: hidden;
+}
+
+/*Setting the size of the div(imgcontainer class) */
+.imgcontainer { 
+    width: 200px;
+    height:200px;
+ }
+
+ /* Setting the starting point and ending point of the animations using @keyframes*/
+ @keyframes movecycle {
+    from {
+            margin-left:0px;
+    }
+    to   {
+            margin-left:500px;
+    }
+ }
+
+ /*Setting the animation behaviour, timing and iterations of the image */
+img {
+    animation-name: movecycle; /* Uses the animation behaviour specified in @keyframes movecycle */
+    animation-duration: 5s; /* Animation happens for 5 seconds */
+    animation-timing-function: ease-out; /* Specifies the animation speed of the bicycle to slow down as it reaches the end of the animation time*/
+    animation-iteration-count: infinite; /* Specific that the animation should loop infinitely */
+}
